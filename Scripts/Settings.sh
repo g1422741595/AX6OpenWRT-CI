@@ -69,7 +69,8 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 	echo "CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y" >> ./.config
 fi
 
-if [[ "${WRT_CONFIG,,}" == *"IPQ60XX"* ]]; then
+if [[ "${WRT_CONFIG,,}" == *"ipq60"* ]]; then
+	echo "IPQ60XX CONFIG set up successfully!"
 	echo "CONFIG_PACKAGE_kmod-sctp=m" >> ./.config
 	echo "CONFIG_PACKAGE_kmod-sctp-diag=m" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-dockerman=m" >> ./.config
