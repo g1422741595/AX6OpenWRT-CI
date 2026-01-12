@@ -71,8 +71,8 @@ fi
 
 if [[ "${WRT_CONFIG,,}" == *"ipq60"* ]]; then
 	echo "IPQ60XX CONFIG set up successfully!"
-	echo "CONFIG_PACKAGE_kmod-sctp=m" >> ./.config
-	echo "CONFIG_PACKAGE_kmod-sctp-diag=m" >> ./.config
+	echo "CONFIG_PACKAGE_kmod-sctp=y" >> ./.config
+	echo "CONFIG_PACKAGE_kmod-sctp-diag=y" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-dockerman=m" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
 
