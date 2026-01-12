@@ -68,3 +68,11 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 	#其他调整
 	echo "CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y" >> ./.config
 fi
+
+if [[ "${WRT_CONFIG,,}" == *"IPQ60XX"* ]]; then
+	echo "CONFIG_PACKAGE_kmod-sctp=m" >> ./.config
+	echo "CONFIG_PACKAGE_kmod-sctp-diag=m" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-dockerman=m" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
+
+fi
