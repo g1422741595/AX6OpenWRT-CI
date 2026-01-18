@@ -91,4 +91,9 @@ if [[ "${WRT_CONFIG,,}" == *"ipq60"* ]]; then
 	echo "CONFIG_PACKAGE_zoneinfo-poles=y" >> ./.config
 	echo "CONFIG_PACKAGE_zoneinfo-simple=y" >> ./.config
 	echo "CONFIG_PACKAGE_zoneinfo-southamerica=y" >> ./.config
+	
+	echo "CONFIG_PACKAGE_luci-app-ddns-go=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-mosdns=y" >> ./.config
+
+	
 fi
