@@ -94,6 +94,7 @@ if [[ "${WRT_CONFIG,,}" == *"ipq60"* ]]; then
 	
 	echo "CONFIG_PACKAGE_luci-app-ddns-go=y" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-mosdns=y" >> ./.config
+	echo "CONFIG_PACKAGE_adguardhome=y" >> ./.config
 
 	
 fi
