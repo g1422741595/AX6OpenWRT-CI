@@ -74,3 +74,33 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 		echo "qualcommax set up nowifi successfully!"
 	fi
 fi
+
+if [[ "${WRT_CONFIG,,}" == *"ipq60"* ]]; then
+	echo "IPQ60XX CONFIG set up successfully!"
+	echo "CONFIG_PACKAGE_kmod-sctp=y" >> ./.config
+	echo "CONFIG_PACKAGE_kmod-sctp-diag=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-dockerman=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
+#
+# Zoneinfo
+#
+	echo "CONFIG_PACKAGE_zoneinfo-africa=y" >> ./.config
+	# CONFIG_PACKAGE_zoneinfo-all is not set
+	echo "CONFIG_PACKAGE_zoneinfo-asia=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-atlantic=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-australia-nz=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-core=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-europe=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-india=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-northamerica=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-pacific=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-poles=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-simple=y" >> ./.config
+	echo "CONFIG_PACKAGE_zoneinfo-southamerica=y" >> ./.config
+	
+	echo "CONFIG_PACKAGE_luci-app-ddns-go=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-mosdns=y" >> ./.config
+	echo "CONFIG_PACKAGE_adguardhome=y" >> ./.config
+
+	
+fi
