@@ -64,6 +64,7 @@ if [[ "${WRT_CONFIG,,}" == *"ipq60"* ]]; then
 	echo "CONFIG_PACKAGE_kmod-sctp-diag=y" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-dockerman=y" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
+	echo "CONFIG_PACKAGE_luci-app-momo=y" >> ./.config
 #
 # Zoneinfo
 #
